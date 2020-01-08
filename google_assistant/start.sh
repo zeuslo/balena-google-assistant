@@ -22,10 +22,10 @@ if [ "$GOOGLE_ASSISTANT_CREDENTIALS" != '' ]; then
 fi
 
 if [ -f "$CREDENTIALS_FILE"  ]; then
-    echo "Starting googlesamples-assistant-hotword ..."
+    echo "Starting googlesamples-assistant-pushtotalk ..."
     source /env/bin/activate 
-    googlesamples-assistant-hotword --project-id $GOOGLE_ASSISTANT_PROJECT_ID --device-model-id $GOOGLE_ASSISTANT_DEVICE_MODEL_ID
-    echo "ERROR: googlesamples-assistant-hotword terminated unexpectedly."
+    googlesamples-assistant-pushtotalk --project-id $GOOGLE_ASSISTANT_PROJECT_ID --device-model-id $GOOGLE_ASSISTANT_DEVICE_MODEL_ID
+    echo "ERROR: googlesamples-assistant-pushtotalk terminated unexpectedly."
     sleep 3600
 else
     echo "The credentials ($CREDENTIALS_FILE) are not set !"
